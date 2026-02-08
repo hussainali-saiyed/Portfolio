@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RAS Prototype Case Study | Hussain Ali Saiyed</title>
+    <meta
+      name="description"
+      content="Case study: Smart recirculating aquaculture system prototype with sensors, MCU control, and water-quality monitoring."
+    />
+    <link rel="stylesheet" href="../assets/styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="container navbar">
+        <div class="logo"><a href="../index.html">Hussain Ali Saiyed</a></div>
+        <nav class="nav-links" aria-label="Primary">
+          <a href="../index.html#projects">Projects</a>
+          <a href="../notes/index.html">Notes</a>
+          <a href="../index.html#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main" class="section">
+      <div class="container">
+        <p class="eyebrow">Case Study</p>
+        <h1>Smart Recirculating Aquaculture System (RAS) Prototype</h1>
+        <p>
+          Prototype system integrating sensors, microcontroller control, and pump automation to keep water quality
+          stable for a small-scale aquaculture loop.
+        </p>
+
+        <div class="card-grid" style="margin-top: 2rem;">
+          <section class="card">
+            <h2>Problem</h2>
+            <p>
+              Manual monitoring of pH, dissolved oxygen, and temperature was inconsistent and delayed. The goal was
+              to build a continuous monitoring system with automated pump and flow control to stabilize water
+              quality in near real time.
+            </p>
+          </section>
+          <section class="card">
+            <h2>Constraints</h2>
+            <p>
+              Sensors needed frequent calibration, budget was limited to off-the-shelf components, and the system
+              had to run unattended for 24/7 sampling. A simple UI was required for non-technical operators.
+            </p>
+          </section>
+          <section class="card">
+            <h2>System design</h2>
+            <p>
+              Selected a modular architecture: sensor cluster → MCU data acquisition → pump control relay board → UI
+              dashboard. Implemented alarms for high ammonia risk using proxy thresholds (estimate-based).
+            </p>
+          </section>
+          <section class="card">
+            <h2>Implementation</h2>
+            <p>
+              Integrated pH, DO, temperature, and flow sensors with an Arduino-class MCU. Built control firmware to
+              adjust pump cycles based on flow feedback and scheduled backwash routines to reduce clogging.
+            </p>
+          </section>
+          <section class="card">
+            <h2>Results</h2>
+            <p>
+              Achieved continuous logging at 1 Hz with alerting. Reduced manual water checks by an estimated 60% and
+              improved daily stability of dissolved oxygen by ~15% (estimate from pilot runs).
+            </p>
+          </section>
+          <section class="card">
+            <h2>What I’d improve next</h2>
+            <p>
+              Add a redundancy sensor for DO, implement PID tuning for pump control, and deploy a predictive model
+              for ammonia risk to preempt spikes.
+            </p>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="container">
+        <a href="../index.html#projects">← Back to projects</a>
+      </div>
+    </footer>
+  </body>
+</html>
