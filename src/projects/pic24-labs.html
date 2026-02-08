@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PIC24 Embedded Labs Case Study | Hussain Ali Saiyed</title>
+    <meta
+      name="description"
+      content="Case study: PIC24 embedded labs covering timers, interrupts, ADC, and UART with reusable drivers."
+    />
+    <link rel="stylesheet" href="../assets/styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="container navbar">
+        <div class="logo"><a href="../index.html">Hussain Ali Saiyed</a></div>
+        <nav class="nav-links" aria-label="Primary">
+          <a href="../index.html#projects">Projects</a>
+          <a href="../notes/index.html">Notes</a>
+          <a href="../index.html#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main" class="section">
+      <div class="container">
+        <p class="eyebrow">Case Study</p>
+        <h1>PIC24 Embedded Labs</h1>
+        <p>Structured lab work focused on core MCU peripherals and reusable firmware patterns.</p>
+
+        <div class="card-grid" style="margin-top: 2rem;">
+          <section class="card">
+            <h2>Problem</h2>
+            <p>
+              Labs were inconsistent and difficult to reuse across cohorts. A more structured, repeatable lab set
+              was needed to accelerate learning and reduce setup time.
+            </p>
+          </section>
+          <section class="card">
+            <h2>Constraints</h2>
+            <p>
+              Limited lab time and shared hardware. The workflows had to be easy to reset and validate without
+              specialized equipment.
+            </p>
+          </section>
+          <section class="card">
+            <h2>System design</h2>
+            <p>
+              Created a base firmware template with driver hooks for timers, interrupts, ADC, and UART. Designed a
+              checklist-based validation flow to ensure repeatability.
+            </p>
+          </section>
+          <section class="card">
+            <h2>Implementation</h2>
+            <p>
+              Wrote timer and UART drivers, added interrupt-driven ADC sampling, and built a serial console for
+              rapid verification. Packaged lab notes with troubleshooting steps.
+            </p>
+          </section>
+          <section class="card">
+            <h2>Results</h2>
+            <p>
+              Reduced setup time by ~25% (estimate) and improved lab completion rates. Students reported clearer
+              debugging steps and faster progress between modules.
+            </p>
+          </section>
+          <section class="card">
+            <h2>What I’d improve next</h2>
+            <p>
+              Add automated unit tests on the peripheral drivers and provide a visualization dashboard for UART
+              logs.
+            </p>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="container">
+        <a href="../index.html#projects">← Back to projects</a>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>STM32 Water Level UI Case Study | Hussain Ali Saiyed</title>
+    <meta
+      name="description"
+      content="Case study: STM32 + HC-SR04 water level measurement with TouchGFX UI." />
+    <link rel="stylesheet" href="../assets/styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="container navbar">
+        <div class="logo"><a href="../index.html">Hussain Ali Saiyed</a></div>
+        <nav class="nav-links" aria-label="Primary">
+          <a href="../index.html#projects">Projects</a>
+          <a href="../notes/index.html">Notes</a>
+          <a href="../index.html#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main" class="section">
+      <div class="container">
+        <p class="eyebrow">Case Study</p>
+        <h1>STM32 + HC-SR04 Water Level Measurement + TouchGFX UI</h1>
+        <p>
+          Embedded firmware and UI experience that provides clear tank-level feedback, calibration, and alarms.
+        </p>
+
+        <div class="card-grid" style="margin-top: 2rem;">
+          <section class="card">
+            <h2>Problem</h2>
+            <p>
+              Operators needed a reliable, easy-to-read UI for water tank levels without manual measurements. The
+              system had to update quickly and visually indicate alarms.
+            </p>
+          </section>
+          <section class="card">
+            <h2>Constraints</h2>
+            <p>
+              Sensor noise from reflections, limited MCU resources for UI rendering, and the need to support
+              calibration in-field.
+            </p>
+          </section>
+          <section class="card">
+            <h2>System design</h2>
+            <p>
+              Built a layered architecture: sensor driver → filtering and conversion → UI model → TouchGFX view.
+              Implemented a moving-average filter and configurable thresholds.
+            </p>
+          </section>
+          <section class="card">
+            <h2>Implementation</h2>
+            <p>
+              Configured STM32 timers for echo capture, wrote a distance conversion routine, and implemented a
+              TouchGFX dashboard with color-coded alarms and calibration prompts.
+            </p>
+          </section>
+          <section class="card">
+            <h2>Results</h2>
+            <p>
+              Achieved stable readings within ±1.5 cm in lab tests (estimate) and reduced UI update latency to
+              ~200 ms. User feedback reported faster decision-making during fill/empty cycles.
+            </p>
+          </section>
+          <section class="card">
+            <h2>What I’d improve next</h2>
+            <p>
+              Add temperature compensation, implement a sensor health check, and capture data logs for predictive
+              maintenance.
+            </p>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="container">
+        <a href="../index.html#projects">← Back to projects</a>
+      </div>
+    </footer>
+  </body>
+</html>
